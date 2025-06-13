@@ -1,0 +1,122 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique // Changed to String? as per NextAuth typical schema
+  emailVerified DateTime?
+  image         String?
+  password_hash String?   // Kept for Credentials provider
+  user_type     UserType  @default(INDIVIDUAL) // Custom field
+  created_at    DateTime  @default(now())      // Custom field
+  updated_at    DateTime  @updatedAt          // Custom field
+  orders        Order[]   // Custom relation
+
+  accounts      Account[]
+  sessions      Session[]
+}
+
+model Account {
+  id                 String  @id @default(cuid())
+  userId             String
+  type               String
+  provider           String
+  providerAccountId  String
+  refresh_token      String? @db.Text // Changed to @db.Text as per common practice for longer tokens
+  access_token       String? @db.Text // Changed to @db.Text
+  expires_at         Int?
+  token_type         String?
+  scope              String?
+  id_token           String? @db.Text // Changed to @db.Text
+  session_state      String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model Product {
+  id              String    @id @default(cuid())
+  name            String
+  slug            String    @unique
+  brand           Brand
+  category        Category
+  description     String?
+  base_price      Decimal
+  stock_quantity  Int       @default(0)
+  created_at      DateTime  @default(now())
+  updated_at      DateTime  @updatedAt
+  OrderItem       OrderItem[]
+}
+
+model Order {
+  id            String      @id @default(cuid())
+  user          User        @relation(fields: [userId], references: [id])
+  userId        String
+  order_number  String      @unique @default(cuid())
+  status        OrderStatus @default(PENDING)
+  total_amount  Decimal
+  created_at    DateTime  @default(now())
+  updated_at    DateTime  @updatedAt
+  items         OrderItem[]
+}
+
+model OrderItem {
+  id        String  @id @default(cuid())
+  order     Order   @relation(fields: [orderId], references: [id])
+  orderId   String
+  product   Product @relation(fields: [productId], references: [id])
+  productId String
+  quantity  Int
+  price     Decimal
+}
+
+enum UserType {
+  INDIVIDUAL
+  BUSINESS
+}
+
+enum Brand {
+  ADITYA511
+  SUDARSHAN_GOLD
+}
+
+enum Category {
+  WHOLE
+  POWDER
+}
+
+enum OrderStatus {
+  PENDING
+  CONFIRMED
+  PROCESSING
+  SHIPPED
+  DELIVERED
+  CANCELLED
+}
