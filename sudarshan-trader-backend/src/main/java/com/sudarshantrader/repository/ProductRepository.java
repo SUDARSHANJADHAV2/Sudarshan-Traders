@@ -1,6 +1,6 @@
-package com.sudarshantrader.backend.repository;
+package com.sudarshantrader.repository;
 
-import com.sudarshantrader.backend.entity.Product;
+import com.sudarshantrader.entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,11 +1,11 @@
-package com.sudarshantrader.backend.service;
+package com.sudarshantrader.service;
 
-import com.sudarshantrader.backend.dto.OrderItemRequest;
-import com.sudarshantrader.backend.dto.OrderRequest;
-import com.sudarshantrader.backend.entity.*;
-import com.sudarshantrader.backend.repository.OrderRepository;
-import com.sudarshantrader.backend.repository.ProductRepository;
-import com.sudarshantrader.backend.repository.UserRepository;
+import com.sudarshantrader.dto.OrderItemRequest;
+import com.sudarshantrader.dto.OrderRequest;
+import com.sudarshantrader.entity.*;
+import com.sudarshantrader.repository.OrderRepository;
+import com.sudarshantrader.repository.ProductRepository;
+import com.sudarshantrader.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

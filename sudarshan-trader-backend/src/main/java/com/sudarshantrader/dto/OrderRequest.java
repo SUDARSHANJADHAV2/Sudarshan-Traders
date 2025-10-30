@@ -1,4 +1,4 @@
-package com.sudarshantrader.backend.dto;
+package com.sudarshantrader.dto;
 
 import java.util.List;
 

@@ -1,8 +1,8 @@
-package com.sudarshantrader.backend.controller;
+package com.sudarshantrader.controller;
 
-import com.sudarshantrader.backend.dto.ProductDTO;
-import com.sudarshantrader.backend.entity.Product;
-import com.sudarshantrader.backend.service.ProductService;
+import com.sudarshantrader.dto.ProductDTO;
+import com.sudarshantrader.entity.Product;
+import com.sudarshantrader.service.ProductService;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;

@@ -1,4 +1,4 @@
-package com.sudarshantrader.backend.security;
+package com.sudarshantrader.security;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

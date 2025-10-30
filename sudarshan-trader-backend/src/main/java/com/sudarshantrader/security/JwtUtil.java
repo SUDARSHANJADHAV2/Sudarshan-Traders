@@ -1,4 +1,4 @@
-package com.sudarshantrader.backend.security;
+package com.sudarshantrader.security;
 
 import io.jsonwebtoken.*;
 import org.springframework.stereotype.Component;

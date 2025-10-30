@@ -2,7 +2,7 @@ package com.sudarshantrader.service;
 
 import com.lowagie.text.*;
 import com.lowagie.text.pdf.PdfWriter;
-import com.sudarshantrader.model.Order;
+import com.sudarshantrader.entity.Order;
 import org.springframework.stereotype.Service;
 
 import java.io.File;

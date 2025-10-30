@@ -1,4 +1,4 @@
-package com.sudarshantrader.backend.dto;
+package com.sudarshantrader.dto;
 
 public class LoginRequest {
     private String email;

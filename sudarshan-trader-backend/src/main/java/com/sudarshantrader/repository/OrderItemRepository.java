@@ -1,6 +1,6 @@
-package com.sudarshantrader.backend.repository;
+package com.sudarshantrader.repository;
 
-import com.sudarshantrader.backend.entity.OrderItem;
+import com.sudarshantrader.entity.OrderItem;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

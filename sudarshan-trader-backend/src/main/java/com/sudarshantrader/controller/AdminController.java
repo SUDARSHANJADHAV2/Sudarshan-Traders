@@ -1,8 +1,8 @@
 package com.sudarshantrader.controller;
 
-import com.sudarshantrader.model.Product;
-import com.sudarshantrader.model.User;
-import com.sudarshantrader.model.enums.OrderStatus;
+import com.sudarshantrader.entity.Product;
+import com.sudarshantrader.entity.User;
+import com.sudarshantrader.entity.OrderStatus;
 import com.sudarshantrader.service.ProductService;
 import com.sudarshantrader.service.OrderService;
 import com.sudarshantrader.service.UserService;

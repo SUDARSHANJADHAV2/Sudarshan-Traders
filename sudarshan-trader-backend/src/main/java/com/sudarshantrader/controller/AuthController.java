@@ -1,8 +1,8 @@
-package com.sudarshantrader.backend.controller;
+package com.sudarshantrader.controller;
 
-import com.sudarshantrader.backend.dto.*;
-import com.sudarshantrader.backend.security.JwtUtil;
-import com.sudarshantrader.backend.service.AuthService;
+import com.sudarshantrader.dto.*;
+import com.sudarshantrader.security.JwtUtil;
+import com.sudarshantrader.service.AuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;

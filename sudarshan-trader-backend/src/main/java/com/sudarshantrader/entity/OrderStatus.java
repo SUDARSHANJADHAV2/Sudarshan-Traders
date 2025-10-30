@@ -1,4 +1,4 @@
-package com.sudarshantrader.model.enums;
+package com.sudarshantrader.entity;
 
 public enum OrderStatus {
     PLACED,

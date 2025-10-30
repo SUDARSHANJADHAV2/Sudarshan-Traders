@@ -1,11 +1,11 @@
-package com.sudarshantrader.backend.controller;
+package com.sudarshantrader.controller;
 
-import com.sudarshantrader.backend.dto.OrderRequest;
-import com.sudarshantrader.backend.dto.OrderResponse;
-import com.sudarshantrader.backend.entity.Order;
-import com.sudarshantrader.backend.entity.User;
-import com.sudarshantrader.backend.service.OrderService;
-import com.sudarshantrader.backend.service.UserService;
+import com.sudarshantrader.dto.OrderRequest;
+import com.sudarshantrader.dto.OrderResponse;
+import com.sudarshantrader.entity.Order;
+import com.sudarshantrader.entity.User;
+import com.sudarshantrader.service.OrderService;
+import com.sudarshantrader.service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;

@@ -1,9 +1,9 @@
-package com.sudarshantrader.backend.service;
+package com.sudarshantrader.service;
 
-import com.sudarshantrader.backend.dto.*;
-import com.sudarshantrader.backend.entity.User;
-import com.sudarshantrader.backend.repository.UserRepository;
-import com.sudarshantrader.backend.security.JwtUtil;
+import com.sudarshantrader.dto.*;
+import com.sudarshantrader.entity.User;
+import com.sudarshantrader.repository.UserRepository;
+import com.sudarshantrader.security.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

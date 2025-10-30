@@ -1,7 +1,7 @@
-package com.sudarshantrader.backend.service;
+package com.sudarshantrader.service;
 
-import com.sudarshantrader.backend.entity.User;
-import com.sudarshantrader.backend.repository.UserRepository;
+import com.sudarshantrader.entity.User;
+import com.sudarshantrader.repository.UserRepository;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.*;
 import org.springframework.stereotype.Service;

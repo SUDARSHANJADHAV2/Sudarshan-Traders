@@ -1,7 +1,7 @@
-package com.sudarshantrader.backend.service;
+package com.sudarshantrader.service;
 
-import com.sudarshantrader.backend.entity.Product;
-import com.sudarshantrader.backend.repository.ProductRepository;
+import com.sudarshantrader.entity.Product;
+import com.sudarshantrader.repository.ProductRepository;
 import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;

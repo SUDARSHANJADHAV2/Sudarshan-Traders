@@ -1,9 +1,9 @@
-package com.sudarshantrader.backend.config;
+package com.sudarshantrader.config;
 
-import com.sudarshantrader.backend.entity.Product;
-import com.sudarshantrader.backend.entity.User;
-import com.sudarshantrader.backend.repository.ProductRepository;
-import com.sudarshantrader.backend.repository.UserRepository;
+import com.sudarshantrader.entity.Product;
+import com.sudarshantrader.entity.User;
+import com.sudarshantrader.repository.ProductRepository;
+import com.sudarshantrader.repository.UserRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;

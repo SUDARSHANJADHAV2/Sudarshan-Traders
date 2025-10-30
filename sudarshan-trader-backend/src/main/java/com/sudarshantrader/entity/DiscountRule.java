@@ -1,4 +1,4 @@
-package com.sudarshantrader.model;
+package com.sudarshantrader.entity;
 
 import jakarta.persistence.*;
 

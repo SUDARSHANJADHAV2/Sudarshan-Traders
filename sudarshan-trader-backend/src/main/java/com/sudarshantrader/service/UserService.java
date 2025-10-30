@@ -1,7 +1,7 @@
 package com.sudarshantrader.service;
 
-import com.sudarshantrader.model.User;
-import com.sudarshantrader.model.enums.Role;
+import com.sudarshantrader.entity.User;
+import com.sudarshantrader.entity.Role;
 import com.sudarshantrader.repository.UserRepository;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.*;

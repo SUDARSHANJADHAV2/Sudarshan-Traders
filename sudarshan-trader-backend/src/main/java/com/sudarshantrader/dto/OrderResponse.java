@@ -1,6 +1,6 @@
-package com.sudarshantrader.backend.dto;
+package com.sudarshantrader.dto;
 
-import com.sudarshantrader.backend.entity.Order;
+import com.sudarshantrader.entity.Order;
 
 public class OrderResponse {
     private Long id;
