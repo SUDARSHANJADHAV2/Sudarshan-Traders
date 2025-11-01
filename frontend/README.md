@@ -1,16 +1,126 @@
-# React + Vite
+# Sudarshan Trader Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Modern React frontend for B2B Turmeric Wholesale E-commerce platform.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Framework:** React 18 with Vite
+- **Styling:** Tailwind CSS
+- **Routing:** React Router DOM
+- **State Management:** Context API
+- **HTTP Client:** Axios
+- **Notifications:** React Hot Toast
+- **Payment:** Razorpay
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Modern turmeric-themed UI (gold, saffron colors)
+- Product catalog with filters and search
+- Shopping cart with local storage persistence
+- Multiple payment modes (COD, Online, Bank Transfer)
+- Buyer dashboard (orders, profile)
+- Admin dashboard (buyer verification, product management, orders)
+- Responsive design (mobile-first)
+- Toast notifications
 
-## Expanding the ESLint configuration
+## Prerequisites
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Node.js 18+ and npm
+- Backend API running (see backend/README.md)
+
+## Local Setup
+
+### 1. Install dependencies
+
+```bash
+npm install
+```
+
+### 2. Configure environment
+
+Copy `.env.example` to `.env`:
+
+```bash
+cp .env.example .env
+```
+
+Update `.env` with your values:
+```
+VITE_API_URL=http://localhost:8080/api
+VITE_RAZORPAY_KEY=rzp_test_xxxxxxxxxx
+```
+
+### 3. Run development server
+
+```bash
+npm run dev
+```
+
+Frontend will be available at `http://localhost:5173`
+
+### 4. Build for production
+
+```bash
+npm run build
+```
+
+Production build will be in `dist/` directory.
+
+## Project Structure
+
+```
+frontend/
+├── src/
+│   ├── components/       # Reusable components
+│   ├── context/          # React Context providers
+│   ├── pages/
+│   │   ├── public/       # Public pages
+│   │   ├── buyer/        # Buyer pages
+│   │   └── admin/        # Admin pages
+│   ├── services/         # API service layer
+│   ├── App.jsx           # Main app with routing
+│   └── index.css         # Tailwind CSS
+├── package.json
+├── tailwind.config.js
+└── vite.config.js
+```
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build locally
+
+## User Flows
+
+### Buyer Flow
+1. Register account (requires GST number)
+2. Wait for admin verification
+3. Browse products and add to cart
+4. Checkout with COD/Online/Bank Transfer
+5. View order history and download invoices
+
+### Admin Flow
+1. Login with admin credentials
+2. Verify pending buyer registrations
+3. Manage products (CRUD operations)
+4. View and manage all orders
+5. Update order status
+
+## Deployment
+
+### Deploy to Netlify (Free)
+
+1. Connect GitHub repository
+2. Build command: `npm run build`
+3. Publish directory: `dist`
+4. Add environment variables
+5. Deploy
+
+## API Integration
+
+Frontend communicates with backend via Axios. All API calls go through service layer in `src/services/`. JWT tokens are automatically attached to authenticated requests via Axios interceptor.
+
+---
+
+Built with ❤️ for Sudarshan Trader
