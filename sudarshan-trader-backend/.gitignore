@@ -1,9 +1,0 @@
-/target
-/.idea
-/.classpath
-/.project
-/.settings
-/out
-*.iml
-invoices/
-application.properties
